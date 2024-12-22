@@ -1,0 +1,371 @@
+/*navbar**********************************/
+
+:root {
+    --main-color: #3867d6;
+  }
+  
+   *{
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.2s linear;
+    -webkit-box-sizing: border-box;
+  }
+  
+  html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+  }
+  
+  html::-webkit-scrollbar {
+    width: 1rem;
+  }
+  
+  html::-webkit-scrollbar-track {
+    background: #444;
+  }
+  
+  html::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+    border-radius: 5rem;
+  }
+  
+  body {
+      background: linear-gradient(-45deg, #000000, #ffffff, #000000, #817e7e);
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+    min-height: 100vh;
+  }
+  
+  @keyframes gradient {
+      0% {
+          background-position: 0% 50%;
+      }
+      50% {
+          background-position: 100% 50%;
+      }
+      100% {
+          background-position: 0% 50%;
+      }
+  }
+  
+  selection{
+    padding:2rem 9%;
+    
+  }
+  .heading{
+  text-align:center;
+  padding-bottom:2rem;
+  color:#000000;
+  text-transform:uppercase;
+  font-size:4rem;
+  margin-top: 7%;
+  }
+  .heading span{
+  color:var(--main-color);
+  text-transform:uppercase;
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  }
+  
+  
+  .header {
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center; /* Corrected typo */
+    justify-content: space-between;
+    padding-left: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 15px;
+    margin-left: 10px;
+    
+    
+  }
+  
+  .header .logo {
+    font-weight: bolder;
+    color: #000000;
+    font-size: 2.5rem;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+  }
+  
+  .header .logo span {
+    color: var(--main-color);
+  }
+  
+  .header .navback {
+    background: white;
+    border-radius: 10px 10px 10px 10px;
+    padding-right: 34px;
+    padding-left: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+    margin-left: 20%;
+    margin-right: -125px;
+    justify-content: space-between;
+    box-shadow:0px 6px 16px -6px rgba(1,1,1,0.5);
+  }
+  
+  .header .navbar a {
+    font-size: 1.7rem;
+    color: #0400d8;
+    margin-left: 10px;
+    align-content: center;
+    background: white;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  .header .navbar :hover {
+    background-color: #000;
+    color: #eee;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .navback .navbar a.active {
+    background-color: #000000;
+    border-radius: 10px;
+    color: white;
+  }
+  
+  #menu-bars {
+    font-size: 3rem;
+    color: #fff;
+    cursor: pointer; /* Corrected value */
+  }
+  
+  
+  @media (max-width: 768px) {
+    #menu-bars {
+      display: initial;
+    }
+  
+    .header .navbar {
+      top: 100%;
+      left: 0;
+      right: 0;
+      border-top: 0.1rem solid #222; /* Corrected property */
+      background: #333;
+      clip-path: polygon(0 0, 100% 0, 100%  0, 0 0); /* Corrected value */
+    }
+  
+    .header .navbar .active {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+  
+    .header .navbar a {
+      display: flex;
+      background: #222;
+      border-radius: 0.5rem;
+      padding: 1.3rem;
+      margin: 1.3rem;
+      font-size: 2rem;
+    }
+  
+   .home .content h3{
+    font-size:4rem; }
+  
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /**************************************************/
+  .service .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .service .box-container .box{
+  border-radius: .5rem;
+  background:#000000;
+  text-align:center;
+  padding:2.5rem;
+  }
+  
+  .service .box-container .box i{
+  height:6rem;
+  width:6rem;
+  line-height:6rem;
+  border-radius:50%;
+  font-size:2.5rem;
+  background:var(--main-color);
+  color:#000000;
+  }
+  
+  .service .box-container .box h3{
+  font-size:2rem;
+  color:#000000;
+  padding:1rem 0;
+  }
+  
+  .service .box-container .box p{
+  font-size:1.4rem;
+  color:#ffffff;
+  line-height:1.8;
+  }
+
+  .price .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 20px;
+
+  }
+  
+  .price .box-container .box {
+    padding: 2rem;
+    background: #000000;
+    border-radius: 0.5rem;
+    text-align: center; /* Fix typo */
+  }
+  .price .box-container .box:hover{
+  transform: scale(1.03);
+  }
+  .price .box-container .box .title{
+  background:var(--main-color);
+  color:#ffffff;
+  padding:1.5rem 0;
+  font-size:2rem;
+  }
+  
+  .price .box-container .box .amount{
+  color:#ffffff;
+  padding-top:2rem ;
+  font-size:4rem;
+  }
+  
+  .price .box-container .box ul{
+  list-style-type:none;
+  padding:1rem 0;
+  }
+  
+  .price .box-container .box ul li{
+  font-size:1.5rem;
+  color:#eee;
+  padding:2rem 0;
+  }
+  
+  .price .box-container .box ul i{
+  color:var(--main-color);
+  padding-right:5rem ;
+  }
+
+
+  /**********************footer**********************/
+
+.footer {
+  background-color: #000000;
+  color: #fff;
+  padding: 50px 0;
+  text-align: center; /* Remove if you want different alignment */
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+.footer-item {
+  flex: 1; /* Responsive layout adjustment */
+  margin-bottom: 20px;
+}
+
+.footer-logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer-item h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer-item ul {
+  list-style: none;
+  padding-left: 20px;
+  margin-left: 10px;
+}
+
+.footer-item li {
+  margin-bottom: 5px;
+}
+
+.footer-item a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-item a:hover {
+  color: #ddd;
+}
+
+.social-media {
+  display: flex;
+  justify-content: right;
+  margin-right: 10px;
+}
+
+.social-media li {
+  margin: 0 0px;
+  margin-right: 35px;
+}
+
+.social-media a {
+  color: #fff;
+}
+
+.social-media a:hover {
+  color: #ddd;
+}
+
+.copyright {
+  margin-top: 20px;
+  font-size: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
